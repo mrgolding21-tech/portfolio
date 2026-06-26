@@ -325,21 +325,38 @@
   .case-thumb {
     height: 220px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 10px;
+    padding: 24px;
+    text-align: center;
+  }
+
+  .case-thumb .thumb-label {
     font-family: 'Fraunces', serif;
-    font-size: 20px;
-    font-weight: 300;
-    font-style: italic;
-    letter-spacing: 0.02em;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .case-thumb .thumb-sub {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.75;
+    font-weight: 500;
   }
 
   .case-card.featured .case-thumb { height: auto; min-height: 260px; }
 
-  .thumb-violet { background: #14122A; color: rgba(192,132,252,0.55); }
-  .thumb-sage   { background: #0B1E15; color: rgba(110,231,183,0.45); }
-  .thumb-rose   { background: #1E0E18; color: rgba(244,114,182,0.45); }
-  .thumb-amber  { background: #1C1208; color: rgba(251,191,36,0.45); }
+  .thumb-violet { background: #2D1F5E; color: #E2D4FF; }
+  .thumb-sage   { background: #0D3D2A; color: #A7F3D0; }
+  .thumb-rose   { background: #4A1040; color: #FBCFE8; }
+  .thumb-amber  { background: #3D2200; color: #FDE68A; }
+  .thumb-blue   { background: #0C2D52; color: #BAE6FD; }
+  .thumb-green  { background: #0A2E10; color: #BBF7D0; }
 
   .case-body { padding: 28px 30px 30px; }
   .case-card.featured .case-body { padding: 40px; display: flex; flex-direction: column; justify-content: center; }
@@ -709,13 +726,8 @@
 <!-- STATS -->
 <div class="stats-strip" aria-label="Key figures">
   <div class="stat">
-    <div class="stat-num">8+</div>
+    <div class="stat-num">9+</div>
     <div class="stat-lbl">Years at SCA</div>
-  </div>
-  <div class="stat-divider"></div>
-  <div class="stat">
-    <div class="stat-num">60%</div>
-    <div class="stat-lbl">Reporting time saved</div>
   </div>
   <div class="stat-divider"></div>
   <div class="stat">
@@ -724,8 +736,8 @@
   </div>
   <div class="stat-divider"></div>
   <div class="stat">
-    <div class="stat-num">10+</div>
-    <div class="stat-lbl">Processes redesigned</div>
+    <div class="stat-num">100+</div>
+    <div class="stat-lbl">Podcasts &amp; shows distributed</div>
   </div>
   <div class="stat-divider"></div>
   <p class="stat-bio">Operations and governance leader working at the intersection of <strong>design thinking, process architecture, and emerging technology</strong>. Currently building the systems that keep LiSTNR — Australia's leading digital audio platform — running at scale.</p>
@@ -740,7 +752,10 @@
 
     <!-- Featured -->
     <article class="case-card featured">
-      <div class="case-thumb thumb-violet">Power Automate</div>
+      <div class="case-thumb thumb-violet">
+        <span class="thumb-label">Power Automate</span>
+        <span class="thumb-sub">Automation · Operations</span>
+      </div>
       <div class="case-body">
         <p class="case-type">Automation · Operations</p>
         <h3 class="case-title">Automating episode tracking and reporting to free the whole ops team from manual work</h3>
@@ -756,7 +771,10 @@
 
     <!-- Smartsheets -->
     <article class="case-card">
-      <div class="case-thumb thumb-sage">Social OS</div>
+      <div class="case-thumb thumb-sage">
+        <span class="thumb-label">Social OS</span>
+        <span class="thumb-sub">Smartsheet · Architecture</span>
+      </div>
       <div class="case-body">
         <p class="case-type">Systems Architecture · Process Design</p>
         <h3 class="case-title">Architecting SCA's Social Media workspace for full ecosystem oversight</h3>
@@ -771,13 +789,16 @@
 
     <!-- LiSTNR dashboard -->
     <article class="case-card">
-      <div class="case-thumb thumb-rose">Dashboard</div>
+      <div class="case-thumb thumb-rose">
+        <span class="thumb-label">Dashboards</span>
+        <span class="thumb-sub">Reporting · Data Visualisation</span>
+      </div>
       <div class="case-body">
         <p class="case-type">Reporting · Data Visualisation</p>
-        <h3 class="case-title">60% reduction in reporting time through performance dashboards</h3>
+        <h3 class="case-title">Building performance dashboards that gave leadership real-time visibility</h3>
         <p class="case-desc">Replaced hours of manual data collation with automated performance dashboards giving leadership real-time visibility of platform health, delivery risks and operational issues — directly shaping strategic decisions at LiSTNR.</p>
         <div class="case-impact">
-          <span class="case-impact-pill">60% time saving</span>
+          <span class="case-impact-pill">Significant time saving</span>
           <span class="case-impact-pill">Leadership-level visibility</span>
         </div>
         <a href="#contact" class="case-link">Talk to me about this</a>
@@ -786,7 +807,10 @@
 
     <!-- LiSTNR feature launch -->
     <article class="case-card">
-      <div class="case-thumb thumb-amber">LiSTNR</div>
+      <div class="case-thumb thumb-amber">
+        <span class="thumb-label">LiSTNR</span>
+        <span class="thumb-sub">Product · QA · Launch</span>
+      </div>
       <div class="case-body">
         <p class="case-type">Product · QA · Operations</p>
         <h3 class="case-title">Part of the launch and testing of a new LiSTNR platform feature</h3>
@@ -799,6 +823,53 @@
       </div>
     </article>
 
+    <!-- Podcast & Streaming -->
+    <article class="case-card">
+      <div class="case-thumb thumb-blue">
+        <span class="thumb-label">Podcasts</span>
+        <span class="thumb-sub">Content · Distribution</span>
+      </div>
+      <div class="case-body">
+        <p class="case-type">Content Operations · Distribution</p>
+        <h3 class="case-title">Overseeing end-to-end distribution of LiSTNR's original podcasts and streaming content</h3>
+        <p class="case-desc">Managed the full publishing pipeline for 100+ radio podcasts and original shows across the LiSTNR platform — ensuring on-time delivery, operational accuracy and a seamless listener experience across every distribution touchpoint. Built the process documentation and daily operational checks that made it scalable.</p>
+        <div class="case-impact">
+          <span class="case-impact-pill">100+ shows managed</span>
+          <span class="case-impact-pill">Scalable pipeline built</span>
+          <span class="case-impact-pill">Consistent on-time delivery</span>
+        </div>
+        <a href="#contact" class="case-link">Talk to me about this</a>
+      </div>
+    </article>
+
+    <!-- Sports Coverage -->
+    <article class="case-card">
+      <div class="case-thumb thumb-green">
+        <span class="thumb-label">Live Sport</span>
+        <span class="thumb-sub">AFL · NRL · Broadcast</span>
+      </div>
+      <div class="case-body">
+        <p class="case-type">Live Operations · Broadcast</p>
+        <h3 class="case-title">Delivering 250+ live AFL &amp; NRL sport seasons with minimal disruption</h3>
+        <p class="case-desc">Managed high-stakes, time-sensitive live sport broadcast operations across AFL and NRL seasons — where reliability is non-negotiable and issues must be resolved in real time. Coordinated external partner management and cross-team collaboration to identify, triage and resolve distribution issues under pressure, season after season.</p>
+        <div class="case-impact">
+          <span class="case-impact-pill">250+ seasons delivered</span>
+          <span class="case-impact-pill">Zero-tolerance for disruption</span>
+          <span class="case-impact-pill">Live issue resolution</span>
+        </div>
+        <a href="#contact" class="case-link">Talk to me about this</a>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- CV prompt -->
+  <div style="margin-top:40px; padding:28px 32px; border-radius:16px; border:0.5px solid var(--accent-dim); background:var(--cream-tint); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
+    <div>
+      <p style="font-size:13px; color:var(--accent); letter-spacing:0.1em; text-transform:uppercase; font-weight:500; margin-bottom:6px;">Want the full picture?</p>
+      <p style="font-size:15px; color:var(--text-dark); font-weight:500;">My CV has the complete story — roles, responsibilities and results across 9+ years at SCA.</p>
+    </div>
+    <a href="#contact" class="btn-primary" style="white-space:nowrap;">↓ Request my CV</a>
   </div>
 </section>
 
